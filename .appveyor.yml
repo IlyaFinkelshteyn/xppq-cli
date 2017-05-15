@@ -1,6 +1,5 @@
 install:
 #- '"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsDevCmd.bat"'
-# - where libcpmt.lib
 
 platform:
 - Win32
@@ -17,3 +16,5 @@ matrix:
   allow_failures:
   - os: Visual Studio 2017
 
+on_finish:
+  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
