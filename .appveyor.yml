@@ -1,3 +1,6 @@
+install:
+- "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsDevCmd.bat"
+
 platform:
 - Win32
 - x64
@@ -12,4 +15,3 @@ os :
 matrix:
   allow_failures:
   - os: Visual Studio 2017
-
